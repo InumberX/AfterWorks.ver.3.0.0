@@ -1,0 +1,383 @@
+@charset "utf-8";
+
+/* reset */
+body {
+min-width: 1024px;
+background-image: url(./img/img_bg.jpg);
+background-repeat: no-repeat;
+background-position: top center;
+-webkit-background-size: cover;
+background-size: cover;
+background-attachment: fixed;
+z-index: -1;
+}
+body:before {
+content: none;
+}
+h1, h2, h3, h4, h5, h6, dl, dt, dd, p, blockquote, ul, ol, li, span {
+font-size: 1.6rem;
+line-height: 1.4;
+text-align: left;
+}
+a {
+transition: .3s all;
+}
+a:active, a:hover {
+opacity: 0.8;
+text-decoration: none;
+}
+
+.pc-obj {
+display: block;
+}
+.sp-obj {
+display: none;
+}
+
+/* アコーディオン */
+.acd-head {
+text-align: center;
+padding: 0;
+margin: 0;
+width: 100%;
+}
+.acd-head .acd-btn {
+display: inline-block;
+margin: 24px auto;
+padding: 16px 48px;
+width: 80%;
+font-size: 32px;
+color: #fff;
+background: #2846A0;
+border: 2px solid #2846A0;
+box-shadow: 0 0 6px rgba(8, 6, 7, 0.4);
+position: relative;
+-webkit-transition: .3s all;
+-moz-transition: .3s all;
+-ms-transition: .3s all;
+-o-transition: .3s all;
+transition: .3s all;
+}
+.acd-head .acd-btn:hover {
+text-decoration: none;
+opacity: 1.0;
+box-shadow: 0 2px 12px rgba(8, 6, 7, 0.4);
+color: #2846A0;
+background: #fafbff;
+}
+.acd-head .acd-btn::after {
+content: '';
+width: 20px;
+height: 20px;
+border: 0px;
+border-top: solid 2px #fff;
+border-right: solid 2px #fff;
+-ms-transform: rotate(135deg);
+-webkit-transform: rotate(135deg);
+transform: rotate(135deg);
+position: absolute;
+top: 50%;
+right: 16px;
+margin-top: -12px;
+}
+.acd-head .acd-btn:hover::after {
+border-top: solid 2px #2846A0;
+border-right: solid 2px #2846A0;
+}
+.acd-head.on .acd-btn::after {
+-ms-transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+margin-top: -6px;
+}
+.acd-body {
+display: none;
+padding: 0;
+margin: 0;
+width: 100%;
+}
+
+/* header */
+header .inner {
+display: flex;
+align-items: center;
+padding: 0;
+width: 100vw;
+max-width: 1024px;
+}
+.h-logo-box {
+height: 64px;
+width: 240px;
+}
+.sp-menu-btn {
+display: none;
+}
+.h-menu-nav-box {
+display: inline-block;
+position: relative;
+height: auto;
+background-color: transparent;
+top: auto;
+left: auto;
+padding: 0;
+}
+.h-menu-nav-box .ttl-box {
+display: none;
+}
+.h-menu-nav-box ul {
+text-align: right;
+}
+.h-menu-nav-box ul li {
+display: inline-block;
+border-bottom: none;
+margin: 8px;
+}
+.h-menu-nav-box ul li:first-child {
+border-top: none;
+}
+.h-menu-nav-box ul li a {
+font-size: 1.4rem;
+border: 1px solid #080607;
+padding: 4px 16px;
+min-width: 88px;
+}
+.h-menu-nav-box ul li a:hover {
+opacity: 1.0;
+background-color: #080607;
+color: #fff;
+text-shadow: none;
+}
+.h-menu-nav-box ul li a:after {
+content: none;
+}
+
+/* sp-close-btn */
+a.sp-close-btn {
+display: none;
+}
+
+/* footer */
+footer .inner {
+width: 100%;
+}
+footer .f-cnt-box {
+padding: 16px 0;
+}
+.sitelink-box {
+margin: 0 auto;
+padding: 24px 0;
+width: 960px;
+}
+a.page-top-btn {
+width: 80px;
+height: 80px;
+}
+a.page-top-btn:hover {
+opacity: 0.8;
+}
+a.page-top-btn i {
+width: 80px;
+height: 56px;
+}
+a.page-top-btn i:before {
+font-size: 2.8rem;
+}
+a.page-top-btn span {
+font-size: 1.2rem;
+}
+
+/* main-vis-area */
+.main-vis-area {
+padding: 64px 0 0;
+}
+#INDEX .main-vis-area {
+min-height: 600px;
+}
+#INDEX .main-vis-area .ttl-box img {
+width: 800px;
+}
+
+/* inner */
+.inner {
+margin: 0 auto;
+padding: 0;
+width: 960px;
+}
+
+/* cnt-area */
+.cnt-area > .cnt-box {
+margin: 0;
+padding: 32px 0;
+}
+.cnt-area > .cnt-box:last-child {
+padding-bottom: 80px;
+}
+
+/* ttl-box */
+.ttl-box h2 {
+margin: 24px 0;
+font-size: 4.0rem;
+}
+#INDEX .cnt-area .ttl-box h2 img {
+width: 120px;
+}
+.ttl-box h3 {
+padding: 0;
+margin: 32px auto;
+font-size: 3.2rem;
+}
+.ttl-box h3 span {
+font-size: 3.2rem;
+}
+.ttl-box .sub-ttl {
+margin: 24px 0;
+font-size: 2.4rem;
+}
+.ttl-box h4 {
+font-size: 2.4rem;
+text-align: center;
+margin: 16px 0;
+}
+
+/* breadcrumb */
+.breadcrumb-box ul {
+width: 960px;
+margin: 0 auto;
+padding: 8px;
+}
+
+/* history-box */
+.history-box ul {
+padding-top: 24px;
+}
+.history-box ul:before {
+left: 50%;
+}
+.history-box ul li {
+text-align: right;
+}
+.history-box ul li.reverse {
+text-align: left;
+}
+.history-box ul li i {
+left: 50%;
+margin-left: -34px;
+margin-top: -40px;
+padding: 24px;
+font-size: 2.0rem;
+}
+.history-box ul li .history-cnt-box {
+display: inline-block;
+width: 50%;
+padding: 32px 56px;
+}
+
+/* skill-box */
+.skill-box ul {
+display: flex;
+width: 100%;
+flex-wrap: wrap;
+}
+.skill-box ul li {
+width: 45%;
+margin: 24px;
+}
+.skill-box ul li:first-child {
+margin-top: 24px;
+}
+.skill-box .skill-ico-box {
+width: 80px;
+margin-top: -40px;
+}
+.skill-box .ttl-box h3 {
+margin: 0;
+padding: 24px 16px 24px 96px;
+width: 100%;
+}
+
+/* btn-box */
+#CONTACT .btn-box {
+padding: 16px 32px;
+text-align: center;
+}
+.btn-box .icon-box {
+display: inline-block;
+vertical-align: middle;
+}
+.btn-box .icon-mail {
+margin: 0 40px 0 0;
+width: 120px;
+height: 120px;
+}
+.btn-box .icon-mail:before {
+font-size: 5.6rem;
+}
+.btn-box .icon-mail:after {
+width: 32px;
+height: 32px;
+-ms-transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+bottom: 50%;
+right: -12px;
+margin: 0 0 -16px;
+}
+
+/* square-btn */
+a.square-btn {
+box-shadow: 0 6px 0 rgba(0, 41, 132, 1.0);
+padding: 24px 40px;
+font-size: 2.0rem;
+min-width: 400px;
+}
+a.square-btn.mail {
+display: inline-block;
+margin-bottom: 0;
+}
+
+/* sns-list-box */
+.sns-list-box ul li {
+width: 28%;
+}
+.sns-list-box ul li {
+margin: 32px 16px;
+}
+.sns-list-box ul li a {
+width: 96px;
+height: 96px;
+font-size: 3.2rem;
+}
+
+/* works-box */
+.works-box ul li {
+display: table;
+table-layout: fixed;
+width: 100%;
+margin: 40px 0;
+}
+.works-box ul li:first-child {
+margin-top: 24px;
+}
+.works-box .works-img-box {
+display: table-cell;
+width: 50%;
+padding: 16px 24px;
+vertical-align: middle;
+}
+.works-box .works-desc-box {
+padding: 16px 24px;
+}
+.works-box .btn-box {
+margin: 32px 0;
+}
+
+/* ghost-btn */
+a.ghost-btn:hover {
+opacity: 1.0;
+background-color: #21479B;
+color: #fff;
+}
+a.ghost-btn:hover:after {
+border-top: 1px solid #fff;
+border-right: 1px solid #fff;
+}
